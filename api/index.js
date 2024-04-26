@@ -1,5 +1,5 @@
-import express from "express";
-import cors from "cors";
+const express = require('express');
+const cors = require('cors');
 
 const app = express();
 
@@ -252,6 +252,8 @@ let products = [
   },
 ];
 
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
 // GET USERS
 app.get("/api/users", (req, res) => {
   res.json(users);
@@ -298,6 +300,6 @@ app.delete("/api/products/:id", (req, res) => {
   res.json("Product deleted!");
 });
 
-app.listen(8800, () => {
-  console.log("Connected to backend.");
-});
+app.listen(3000, () => console.log("Server ready on port 3000."));
+
+module.exports = app;
