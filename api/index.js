@@ -300,6 +300,6 @@ app.delete("/api/products/:id", (req, res) => {
   res.json("Product deleted!");
 });
 
-app.listen(3000, () => console.log("Server ready on port 3000."));
+app.listen(3300, () => console.log("Server ready on port 3000."));
 
 module.exports = app;
